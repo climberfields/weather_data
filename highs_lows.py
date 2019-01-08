@@ -10,3 +10,15 @@ with open(filename) as f:
 #we use the next function to show us the next line in the file when passed as the reader object
     header_row = next(reader)
     print(header_row)
+
+    # for index, column_header in enumerate(header_row):
+    #     print(index, column_header)
+
+    highs = []
+    for row in reader:
+        # Take the data and convert it from a string to an integer so it can be read on matplot
+        high = int(row[1])
+        highs.append(high)
+
+
+    print(highs)
